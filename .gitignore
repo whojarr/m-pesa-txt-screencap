@@ -1,0 +1,6 @@
+.DS_Store
+.project
+.pydevproject
+.serverless
+node_modules
+sample_1.jpeg

@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "m-pesa-txt-screencap"
+version = "0.1.0"
+description = ""
+authors = ["David Hunter <dhunter@digitalcreation.co.nz>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^2.0.2"
+requests = "^2.26.0"
+
+[tool.poetry.dev-dependencies]
+boto3 = "^1.20.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

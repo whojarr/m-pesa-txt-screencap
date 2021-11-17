@@ -1,0 +1,12 @@
+{
+  "name": "m-pesa-txt-screencap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "^2.66.1",
+    "serverless-domain-manager": "^5.2.0",
+    "serverless-python-requirements": "^5.1.1",
+    "serverless-wsgi": "^2.0.2"
+  }
+}
