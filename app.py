@@ -80,6 +80,19 @@ def s3_upload(inp_file_name, s3_bucket_name, inp_file_key, content_type):
     return upload_file_response
 
 
+def s3_event(event, context):
+    print("event:{} context:{}".format(event, context))
+
+    # detect the text
+    
+
+    # send message
+    
+
+    # move the image 
+    
+
+
 @app.route("/", methods=["GET", "POST"])
 def event():
 
@@ -130,6 +143,9 @@ def upload_handler():
 
             result=detect_text(file_name,S3_BUCKET)
             print(result)
+            send_teams_message("p-mesa txt screen capture to text", "p-mesa txt screen capture to text", result)
+
+        return render_template("upload.html", **locals())
 
     resp = app.response_class(
         response=json.dumps({"result": result}),

@@ -61,6 +61,15 @@ functions:
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'
+  s3event:
+    handler: app.s3event
+    events:
+      - s3:
+          bucket: ${self:service}-${self:provider.stage}
+          event: s3:ObjectCreated:*
+          rules:
+            - prefix: que/
+          existing: true
 custom:
   wsgi:
     app: app.app

@@ -4,6 +4,12 @@
 
 {% block body %}
 
+	{% if result %}
+	<div>
+		<p>Result: {{ result }}</p>
+	</div>
+	{% endif %}
+
 
 	<form action="/upload/" method="post" enctype="multipart/form-data">
 
